@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean name="fileReader" class="org.js.chp1.readers.FileReader" >
+		<constructor-arg value="res/myfile.txt" />
+	</bean>
+
+	
+	<bean name="ftpReader" class="org.js.chp1.readers.FtpReader" >
+		<property name = "host" value = "myport"/>
+		<property name = "port" value = "9000"/>
+	</bean>
+		
+	<bean name="readerService" class="org.js.chp1.services.ReaderService" >
+		<property name="reader" ref="ftpReader" />
+	</bean>	
+
+</beans>
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<!-- So We Can Wire Dependencies Using Annotations -->
+	<!-- Discover beans and Declare them For you. -->	
+	<context:component-scan base-package = "org.sia.springidol">
+	</context:component-scan>
+
+	<!-- Our Contestants! -->
+	<bean name="saxophonist" class="org.sia.springidol.Saxophonist">
+	</bean>
+
+	<bean name="guitarist" class="org.sia.springidol.Guitarist">
+	</bean>
+
+	<!-- Our Stage -->
+	<bean name="springIdolStage" class="org.sia.springidol.Stage">
+		<property name="performers">
+			<list>
+				<ref bean="guitarist" />
+				<ref bean="saxophonist" />
+			</list>
+		</property>
+	</bean>
+
+
+</beans>
+

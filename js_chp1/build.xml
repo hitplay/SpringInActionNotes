@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+<project basedir="." default="build" name="js_chp1">
+    <property environment="env"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.6"/>
+    <property name="source" value="1.6"/>
+    <path id="js_chp1.classpath">
+        <pathelement location="bin"/>
+        <pathelement location="../../Downloads/Compressed/js-core/lib/commons-logging-1.1.jar"/>
+        <pathelement location="../../Downloads/Compressed/js-core/lib/log4j-1.2.16.jar"/>
+        <pathelement location="../../Downloads/Compressed/js-core/lib/org.springframework.asm-3.0.3.RELEASE.jar"/>
+        <pathelement location="../../Downloads/Compressed/js-core/lib/org.springframework.beans-3.0.3.RELEASE.jar"/>
+        <pathelement location="../../Downloads/Compressed/js-core/lib/org.springframework.context.support-3.0.3.RELEASE.jar"/>
+        <pathelement location="../../Downloads/Compressed/js-core/lib/org.springframework.context-3.0.3.RELEASE.jar"/>
+        <pathelement location="../../Downloads/Compressed/js-core/lib/org.springframework.core-3.0.3.RELEASE.jar"/>
+        <pathelement location="../../Downloads/Compressed/js-core/lib/org.springframework.expression-3.0.3.RELEASE.jar"/>
+        <pathelement location="resources/lib"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.ucls"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="js_chp1.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target name="DataReaderClient">
+        <java classname="org.js.chp1.readers.DataReaderClient" failonerror="true" fork="yes">
+            <classpath refid="js_chp1.classpath"/>
+        </java>
+    </target>
+</project>
