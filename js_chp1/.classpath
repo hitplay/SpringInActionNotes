@@ -2,13 +2,19 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/John/Downloads/Compressed/js-core/lib/commons-logging-1.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/John/Downloads/Compressed/js-core/lib/log4j-1.2.16.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/John/Downloads/Compressed/js-core/lib/org.springframework.asm-3.0.3.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/John/Downloads/Compressed/js-core/lib/org.springframework.beans-3.0.3.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/John/Downloads/Compressed/js-core/lib/org.springframework.context.support-3.0.3.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/John/Downloads/Compressed/js-core/lib/org.springframework.context-3.0.3.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/John/Downloads/Compressed/js-core/lib/org.springframework.core-3.0.3.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/John/Downloads/Compressed/js-core/lib/org.springframework.expression-3.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KyelDavid/Downloads/spring-framework-3.2.1.RELEASE-dist.zip"/>
+	<classpathentry kind="lib" path="C:/Users/KyelDavid/Desktop/external jars/Spring Core/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KyelDavid/Desktop/external jars/Spring Core/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KyelDavid/Desktop/external jars/Spring Core/org.springframework.asm-3.1.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KyelDavid/Desktop/external jars/Spring Core/org.springframework.beans-3.1.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KyelDavid/Desktop/external jars/Spring Core/org.springframework.context.support-3.1.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KyelDavid/Desktop/external jars/Spring Core/org.springframework.context-3.1.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KyelDavid/Desktop/external jars/Spring Core/org.springframework.core-3.1.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KyelDavid/Desktop/external jars/Spring Core/org.springframework.expression-3.1.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KyelDavid/Desktop/external jars/spring-framework-3.1.3.RELEASE/dist/org.springframework.aop-3.1.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KyelDavid/Desktop/external jars/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KyelDavid/Desktop/external jars/cglib-nodep-2.2.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KyelDavid/Downloads/Compressed/jarforaop/jarforaop/aspectjweaver-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KyelDavid/Downloads/Compressed/jarforaop/jarforaop/guice-aopalliance.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

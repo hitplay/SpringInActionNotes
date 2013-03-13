@@ -5,11 +5,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 
-public class Saxophonist implements IPerform{
+public class Saxophonist extends Performer{
 
 	@Override
-	public String perform() {
-		return "I am A Saxophonist and I am Playing The : "+ saxophone;
+	public void perform() {
+		System.out.print( "I am A Saxophonist and I am Playing The : "+ saxophone);
 	}
 
 	public Instrument getSaxophone() {

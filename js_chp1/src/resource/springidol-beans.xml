@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
 	http://www.springframework.org/schema/context
-	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd
+	http://www.springframework.org/schema/aop 
+    http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+	">
 
 	<!-- So We Can Wire Dependencies Using Annotations -->
-	<!-- Discover beans and Declare them For you. -->	
-	<context:component-scan base-package = "org.sia.springidol">
+	<!-- Discover beans and Declare them For you. -->
+	<context:component-scan base-package="org.sia.springidol">
 	</context:component-scan>
+
+	<!-- we need audiences for a show right? :P -->
+	<bean id="audience" class="org.sia.springidol.Audience" />
 
 	<!-- Our Contestants! -->
 	<bean name="saxophonist" class="org.sia.springidol.Saxophonist">
 	</bean>
-
 	<bean name="guitarist" class="org.sia.springidol.Guitarist">
 	</bean>
 
@@ -27,6 +34,20 @@
 			</list>
 		</property>
 	</bean>
+
+
+	<aop:config>
+		<!-- Reference Bean -->
+		<aop:aspect ref = "audience">
+			<!-- Before Performance  -->
+			<!-- <aop:before pointcut = "execution(* org.sia.springidol.IPerform.perform(..) )" method = "takeSeats"/> -->
+			<!-- <aop:before pointcut = "execution(* org.sia.springidol.IPerform.perform(..) )" method = "turnOffCellPhones"/>-->
+			<!-- After Performance -->
+		 <!--  <aop:after-returning pointcut = "execution(* org.sia.springidol.Guitarist.perform(..) )" method = "applaud" />-->
+			<!--  Around Example -->
+		<aop:around pointcut = "execution(* org.sia.springidol.IPerform.perform(..) )" method = "watchPerformance"/>
+		</aop:aspect>
+	</aop:config>
 
 
 </beans>

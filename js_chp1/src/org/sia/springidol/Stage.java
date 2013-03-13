@@ -6,7 +6,7 @@ public class Stage {
 	
 	public void startTheShow(){
 		for(IPerform performer : performers)
-			System.out.println(performer.perform());
+			performer.perform();
 	}
 	
 	public List<IPerform> getPerformers() {
